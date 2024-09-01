@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #3f51b5; /* Brighter blue */
+    --secondary-color: #ff9100; /* Richer orange */
+    --text-color: #222; /* Darker text for better contrast */
+    --background-color: #46bbff; /* Slightly darker background */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: var(--secondary-color);
+}
+
+.hero-section {
+    height: 80vh;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Image/Gujrat_backGround.png') no-repeat center center/cover;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%; /* Reduced padding */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center; /* Center heading */
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center paragraph text */
+    max-width: 800px; /* Limit paragraph width for better readability */
+}
+
+.content-section:nth-child(even) {
+    background-color: white;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 50px 5%;
+    }
+}
